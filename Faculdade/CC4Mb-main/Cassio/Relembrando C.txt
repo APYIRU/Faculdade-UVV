@@ -1,0 +1,112 @@
+6-
+#include <stdio.h>
+#include<math.h>
+
+
+int main()
+{
+    int x,y;
+    printf("Hello World \n");
+    printf("Escreve um número: ");
+    scanf("%d", &x);
+    printf("Escreve um número: ");
+    scanf("%d", &y);
+    printf("%d ", x);
+    printf("%d", y);
+    
+    if(x > y){
+        printf(" \n %d é maior que %d",x,y);
+    } else if(x < y) {
+        printf(" \n %d é maior que %d",y,x);
+    } else {
+        printf("\n Não vou ensinar");
+    }
+    
+    return 0;
+}
+
+7-
+
+
+8-
+#include <stdio.h>
+
+int main()
+{
+    int x,y;
+    printf("Escreva um numero: ");
+    scanf("%d", &x);
+    printf("Escreva outro numero: ");
+    scanf("%d", &y);
+    
+    if (x > y){
+        printf("%d é maior",x);
+    } else {
+        printf("%d é maior",y);
+    }
+    
+    printf("A diferença é de: %d", x - y);
+
+    return 0;
+}
+
+9-
+#include <stdio.h>
+
+int main()
+{
+	int x,y,z;
+	printf("Escolha dentre as seguintes opC'C5es");
+	printf("'1' Soma dos numeros");
+	printf("'2' DiferenC'a dos numeros");
+	printf("'3' Produto dos numeros");
+	printf("'4' DivisC#o dos numeros (denominador nC#o pode ser 0)");
+	scanf("%d", &x);
+	printf("Digite o primeiro numero: ");
+	scanf("%d", &y);
+	printf("Digite o segundo numero: ");
+	scanf("%d", &z);
+
+	switch (x) {
+	case 1:
+		printf("%d", y + z);
+		break;
+	case 2:
+		printf("%d", y - z);
+		break;
+	case 3:
+		printf("%d", y * z);
+		break;
+	case 4:
+		printf("%d", y / z);
+		break;
+	default:
+		printf("Burro");
+		break;
+
+	}
+
+}
+
+10-
+#include <stdio.h>
+
+int main()
+{
+	int x,y;
+	
+	printf("Trabalha a quanto tempo (em anos): ");
+	scanf("%d", &x);
+	printf("Idade? : ");
+	scanf("%d", &y);
+
+	if(y >= 65 || x >= 30 ){
+	    printf("Aposentado");
+	} else if(x >= 60 && y >= 25){
+	    printf("Aposentado");
+	} else {
+	    printf("Vai trabalhar");
+	}
+}
+
+

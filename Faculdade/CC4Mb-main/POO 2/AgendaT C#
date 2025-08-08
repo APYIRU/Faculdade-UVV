@@ -1,0 +1,94 @@
+Program.cs:
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Vinicius
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            
+            Console.WriteLine("Manasses");
+            Contato c1 = new Contato("hanz", "1223", "rolf", 5000);
+            Contato c2 = new Contato("Demolay", "456", "Matta", 6000);
+            Contato c3 = new Contato("Manasses", "789", "chumbo", 10000);
+
+            AgendaT ag = new AgendaT();
+            ag.Inserir(c1.Nome, c1);
+            ag.Inserir(c2.Nome ,c2);
+            ag.Inserir(c3.Nome, c3);
+
+            Console.WriteLine(ag.BuscarContato("Demolay").Apelido);
+            Console.WriteLine($"Minha agenda tem {ag.QtdContatos()} contatos");
+
+        }
+    }
+}
+
+Contato.cs:
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Vinicius
+{
+    internal class Contato
+    {
+
+        public string Nome { get; set; }
+        public string Numero { get; set; }
+        public string Apelido { get; set; }
+        public int Deve { get; set; }
+
+        public Contato(string nome, string numero, string apelido, int deve)
+        {
+            Nome = nome;
+            Numero = numero;
+            Apelido = apelido;
+            Deve = deve;
+        }
+
+
+    }
+}
+
+AgendaT.cs:
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Vinicius
+{
+    internal class AgendaT
+    {
+        public Dictionary<string,Contato> agenda { get; set; }
+
+        //public AgendaT() => agenda = [];
+
+        public AgendaT() => agenda = new Dictionary<string, Contato>();
+
+        public void Inserir(string nome, Contato contato)
+        {
+            agenda.Add(nome, contato);
+        }
+
+        public Contato BuscarContato(string nome)
+        {
+            return agenda[nome];
+        }
+
+        public int QtdContatos()
+        {
+            return agenda.Count();
+        }
+    }
+}
