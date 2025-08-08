@@ -170,3 +170,32 @@ int main()
     return 0;
 }
 
+14-
+#include <stdio.h>
+
+int par(int x){
+    if (x % 2 == 0){
+        return 1;
+    } else {
+        return 0;
+    }
+}
+
+int main()
+{   
+    int x;
+    printf("Escreva um número par: ");
+    scanf("%d", &x);
+    if(par(x) == 1){
+        for(int i = 0; i <= x; i++){
+            if(par(i) == 1){
+                printf("%d ", i);
+            }
+        }
+    }else {
+        printf("NÃO É PAR!!!!!!!!!!!!!!!!!!!! (nao vou ensinar)");
+    }
+    
+    
+    return 0;
+}
