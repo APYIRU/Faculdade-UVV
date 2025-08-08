@@ -199,3 +199,32 @@ int main()
     
     return 0;
 }
+
+
+15-
+#include <stdio.h>
+
+int main()
+{   
+    int maior = 0;
+    int menor;
+    int x = 0;
+    
+    do {
+        printf("Digite um número: ");
+        scanf("%d", &x);
+        
+        if (x > maior){
+            maior = x;
+        }
+        if (x < menor){
+            menor = x;
+        }
+        
+        
+    } while (x >= 0);
+    printf("O maior numero é : %d\n", maior);
+    printf("O menor numero é : %d\n", menor);
+    
+    return 0;
+}
