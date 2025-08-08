@@ -155,3 +155,18 @@ int main()
     return 0;
 }
 
+13-
+#include <stdio.h>
+
+int main()
+{
+   
+    int i = 10;
+    while(i >= 0){
+        printf("%d\n", i);
+        i--;
+    }
+    printf("Fim");
+    return 0;
+}
+
