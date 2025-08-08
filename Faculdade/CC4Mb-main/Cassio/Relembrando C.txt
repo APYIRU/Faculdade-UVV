@@ -55,12 +55,12 @@ int main()
 
 int main()
 {
-	int x,y,z;
-	printf("Escolha dentre as seguintes opC'C5es");
-	printf("'1' Soma dos numeros");
-	printf("'2' DiferenC'a dos numeros");
-	printf("'3' Produto dos numeros");
-	printf("'4' DivisC#o dos numeros (denominador nC#o pode ser 0)");
+    int x,y,z;
+	printf("Escolha dentre as seguintes opções");
+	printf("\n'1' Soma dos numeros");
+	printf("\n'2' DiferenC'a dos numeros");
+	printf("\n'3' Produto dos numeros");
+	printf("\n'4' DivisC#o dos numeros (denominador pode pode ser 0)");
 	scanf("%d", &x);
 	printf("Digite o primeiro numero: ");
 	scanf("%d", &y);
@@ -78,7 +78,11 @@ int main()
 		printf("%d", y * z);
 		break;
 	case 4:
-		printf("%d", y / z);
+		if(z == 0){
+		    printf("NÃO PODE SER ZERO");
+		} else {
+		    printf("%d", y / z);
+		}
 		break;
 	default:
 		printf("Burro");
@@ -86,6 +90,7 @@ int main()
 
 	}
 
+    return 0;
 }
 
 10-
@@ -108,5 +113,6 @@ int main()
 	    printf("Vai trabalhar");
 	}
 }
+
 
 
