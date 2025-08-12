@@ -277,3 +277,25 @@ int main()
     printf("Não consegui colocar no mesmo for");
     return 0;
 }
+
+
+18-
+#include <stdio.h>
+
+int main()
+{
+    int i,x;
+    int lista[10];
+    for(i = 0; i < 10; i++){
+        printf("Escreve o %d numero: ", i + 1);
+        scanf("%d",&x);
+        lista[i] = x;
+        if (lista[i] % 2 == 0){
+            printf("Esse número é par: %d \n", lista[i]);
+        } else {
+            printf("Esse não é par \n");
+        }
+    }
+    
+    return 0;
+}
