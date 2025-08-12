@@ -299,3 +299,28 @@ int main()
     
     return 0;
 }
+
+19-
+TO FAZENDO AINDA
+#include <stdio.h>
+
+int main()
+{
+    int i,x;
+    int lista[10], lista2[10];
+    for(i = 0; i < 10; i++){
+        printf("Escreve o %d da primeira lista: ", i + 1);
+        scanf("%d",&x);
+        lista[i] = x;
+        
+    }
+    for(i = 0; i < 10; i++){
+        printf("Escreve o %d numero da segunda lista: ", i + 1);
+        scanf("%d",&x);
+        lista[i] = x;
+        
+    }
+    
+    
+    return 0;
+}
