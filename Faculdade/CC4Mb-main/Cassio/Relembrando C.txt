@@ -258,3 +258,22 @@ int main()
     return 0;
 }
 
+17-
+#include <stdio.h>
+
+int main()
+{
+    int i,x;
+    int lista[6];
+    for(i = 0; i < 6; i++){
+        printf("Escreve o %d numero: ", i + 1);
+        scanf("%d",&x);
+        lista[i] = x;
+        
+    }
+    for(i = 0; i<6; i++){
+        printf("%d \n", lista[i]);
+    }
+    printf("Não consegui colocar no mesmo for");
+    return 0;
+}
