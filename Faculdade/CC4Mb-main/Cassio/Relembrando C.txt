@@ -228,3 +228,33 @@ int main()
     
     return 0;
 }
+
+
+16-
+#include <stdio.h>
+
+int main()
+{
+    int i, x;
+    printf("Hello World");
+    int lista[6];
+    lista[0] = 1;
+    lista[1] = 0;
+    lista[2] = 5;
+    lista[3] = -2;
+    lista[4] = -5;
+    lista[5] = 7;
+    
+    x = lista[0] + lista[1] + lista[5];
+    
+    printf(" %d ", x);
+    
+    lista[4] = 100;
+    
+    for(i = -1; i < 6; i++) {
+        printf("%d\n", lista[i]);
+    }
+
+    return 0;
+}
+
