@@ -50,3 +50,34 @@ namespace Viniciusa
         }
     }
 }
+
+
+2-
+namespace Viniciusa
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int x = 0;
+            float a = 0, b = 0;
+            Console.WriteLine("Digite 1 para Celsius -> Farenheint: ");
+            Console.WriteLine("Digite 2 para Fareheint -> Celsius: ");
+            Console.WriteLine("Digite 3 para Celsius -> Kelvin: ");
+            Console.WriteLine("Digite 4 para Kelvin -> Celsius: ");
+            x = int.Parse(Console.ReadLine());
+            Console.WriteLine("Escreva a primeira temperatura: ");
+            a = int.Parse(Console.ReadLine());
+            Console.WriteLine("Escreva a segunda teperatura: ");
+            b = int.Parse(Console.ReadLine());
+
+            switch (x)
+            {
+                case 1:
+
+
+
+            }
+        }
+    }
+}
