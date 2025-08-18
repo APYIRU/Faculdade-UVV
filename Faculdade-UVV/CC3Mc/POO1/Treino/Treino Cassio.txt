@@ -1,0 +1,62 @@
+Main:
+
+package com.mycompany.cansei;
+
+
+public class Cansei {
+
+    public static void main(String[] args) {
+        System.out.println("Hello World!");
+        Aluno al1 = new Aluno();
+       
+	
+	Aluno al2 = new Aluno();
+    }
+}
+
+Aluno:
+
+package com.mycompany.cansei;
+
+
+public class Aluno {
+     private String matricula;
+    private String nome;
+    String curso;
+    String turma;
+    int periodo;
+    double nota1B;
+    double nota2B;
+    double notaF;
+    public static int quantidade_alunos = 0;
+    
+    public String getMatricula(){
+        return matricula;
+    }
+    
+    public String getNome(){
+        return nome;
+    public void TrocarInfo(String matricula, String nome, String curso, String turma, int periodo, double nota1B, double nota2B, double notaF){
+        this.matricula = matricula;
+        this.nome = nome;
+        this.curso = curso;
+        this.turma = turma;
+        this.periodo = periodo;
+        this.nota1B = nota1B;
+        this.nota2B = nota2B;
+        this.notaF = notaF;
+        quantidade_alunos++;
+    }
+    
+    public void imprimir(){
+        System.out.println("Matricula:" + this.matricula);
+        System.out.println("Nome: " + this.nome);
+        System.out.println("Curso: " + this.curso);
+        System.out.println("Periodo: " + this.turma);
+        System.out.println("Nota 1: " + this.nota1B);
+        System.out.println("Nota 2: " + this.nota2B);
+        System.out.println("Nota Final: " + this.notaF);
+        
+    }
+    
+}

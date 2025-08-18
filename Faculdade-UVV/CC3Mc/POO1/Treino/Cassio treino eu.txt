@@ -1,0 +1,151 @@
+Main:
+
+package com.mycompany.cansei;
+
+public class Cansei {
+
+    public static void main(String[] args) {
+       System.out.println("Hello World!");
+       Aluno a1 = new Aluno();
+       //System.out.println("Matricula: " + a1.getMatricula());
+       a1.setNome("Daniel");
+       a1.setCurso("Ciencia");
+       a1.setTurma("3");
+       a1.setNota1B(6);
+       a1.setNota2B(5);
+       a1.imprimir();
+ 
+    }
+}
+
+Aluno:
+
+package com.mycompany.cansei;
+import java.time.Year;
+import java.util.Random;
+
+public class Aluno {
+    private static int quantidade_alunos = 0;
+    private String matricula;
+    private String nome;
+    private String curso;
+    private String turma;
+    private int periodo;
+    private double nota1B;
+    private double nota2B;
+    private double notaF;
+    
+    public Aluno(){
+        this.matricula = gerarMatricula();
+        quantidade_alunos++;
+    }
+
+    private String gerarMatricula(){
+        int ano = Year.now().getValue();
+        Random rand = new Random();
+        int aleatorio = rand.nextInt(10000);
+        return ano + String.format("%04d", aleatorio);
+    }
+    
+    private void calcularFinal(){
+        this.notaF = (this.nota1B+this.nota2B)/2;
+    }
+    
+    public boolean passar(String novaTurma, int novoPeriodo){
+        if (this.notaF >= 7){
+            this.turma = novaTurma;
+            this.periodo = novoPeriodo;
+            return true;
+        } System.out.println("Reprovado");
+        return false;
+    }
+    
+    
+    public static int getQuantidade_alunos() {
+        return quantidade_alunos;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public String getCurso() {
+        return curso;
+    }
+
+    public String getTurma() {
+        return turma;
+    }
+
+    public int getPeriodo() {
+        return periodo;
+    }
+
+    public double getNota1B() {
+        return nota1B;
+    }
+
+    public double getNota2B() {
+        return nota2B;
+    }
+
+    public double getNotaF() {
+        return notaF;
+    }
+   
+    
+    public String getMatricula(){
+        return matricula;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome.toUpperCase();
+    }
+
+    public void setCurso(String curso) {
+        this.curso = curso;
+    }
+
+    public void setTurma(String turma) {
+        this.turma = turma;
+    }
+
+    public void setPeriodo(int periodo) {
+        this.periodo = periodo;
+    }
+
+    public void setNota1B(double nota1B) {
+        this.nota1B = nota1B;
+    }
+
+    public void setNota2B(double nota2B) {
+        this.nota2B = nota2B;
+        calcularFinal();
+    }
+    
+    
+    
+    public Aluno(String matricula, String nome, String curso, String turma, int periodo, double nota1B, double nota2B, double notaF){
+        this.matricula = gerarMatricula();
+        quantidade_alunos++;;
+        this.nome = nome.toUpperCase();
+        this.curso = curso;
+        this.turma = turma;
+        this.periodo = periodo;
+        this.nota1B = nota1B;
+        this.nota2B = nota2B;
+        this.notaF = notaF;
+        quantidade_alunos++;
+    }
+    
+    public void imprimir(){
+        System.out.println("Matricula:" + this.matricula);
+        System.out.println("Nome: " + this.nome);
+        System.out.println("Curso: " + this.curso);
+        System.out.println("Periodo: " + this.turma);
+        System.out.println("Nota 1: " + this.nota1B);
+        System.out.println("Nota 2: " + this.nota2B);
+        System.out.println("Nota Final: " + this.notaF);
+        
+    }
+}

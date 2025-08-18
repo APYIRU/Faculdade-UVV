@@ -1,0 +1,21 @@
+Atividade de Revisão Vinicius
+
+1- Usamos para termos um melhor planejamento do projeto dando uma ideia prévia do que poderá ocorrer, prevenindo erros e outros. Usar a modelagem também ajuda na interpretação do projeto que da uma visão mais fácil de se entender tendo como consequência a facilitação na criação do projeto.
+
+2- A resposta está na foto do caderno
+
+3-  E , porque o resto tem paradigmas que não se aplicam em OO.
+
+4- B , porque o objeto é uma das formas que a classe se aplica, como o exemplo da classe Carro com o objeto Fiat. Isso também é chamado de instância de classe.
+
+5- B , o polimorfismo se consiste em um método que pode ser feito de duas formas diferentes, que também é chamado de ligação dinâmica.
+
+6- Definindo tudo que tem na classe como priavate ou protected. Porque é oque foi definido na linguagem (não tem muito oque explicar).
+
+7- C , porque o termo implementa está errado, é B que estende A e B que é derivada de A.
+
+8- E , pois a herança é o maior caso de polimorfismo, sabendo que existe polimorfismo na herança, a gente elimina as outras alternativas.
+
+9- Professor: Id, nome \ Dar aula() Supervisionar()
+Cliente: Cpf, nome \ Treinar() modificar treino()
+Recepcionista: Id, nome \ Cadastrar() Descadastrar()

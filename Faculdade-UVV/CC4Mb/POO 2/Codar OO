@@ -1,0 +1,83 @@
+1-
+namespace Viniciusa
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            List<double> list = new List<double>();
+            double idade, x = -1, a=0, b=0, c = 0, d = 0, e = 0;
+            do
+            {
+                Console.WriteLine("Digite sua idade: ");
+                idade = int.Parse(Console.ReadLine());
+                list.Add(idade);
+                x++;
+            } while (idade  > 0);
+
+            for (int i = 0; i < list.Count; i++)
+            {
+                if (list[i] > 0 && list[i] <= 15)
+                {
+                    a++;
+                }
+                else if (list[i] > 15 && list[i] <= 30)
+                {
+                    b++;
+                }
+                else if (list[i] > 30 && list[i] <= 45)
+                {
+                    c++;
+                }
+                else if (list[i] > 45 && list[i] <= 60)
+                {
+                    d++;
+                }
+                else if (list[i] > 60)
+                {
+                    e++;
+                }
+
+            }
+            Console.WriteLine(a);
+            Console.WriteLine(x);
+            Console.WriteLine($"Porcentagem A: {Math.Round(a / x * 100), 2} ");
+            Console.WriteLine($"Porcentagem B: {Math.Round(b / x * 100),2} ");
+            Console.WriteLine($"Porcentagem C: {Math.Round(c / x * 100),2} ");
+            Console.WriteLine($"Porcentagem D: {Math.Round(d / x * 100),2} ");
+            Console.WriteLine($"Porcentagem E: {Math.Round(e / x * 100),2} ");
+
+        }
+    }
+}
+
+
+2-
+namespace Viniciusa
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int x = 0;
+            float a = 0, b = 0;
+            Console.WriteLine("Digite 1 para Celsius -> Farenheint: ");
+            Console.WriteLine("Digite 2 para Fareheint -> Celsius: ");
+            Console.WriteLine("Digite 3 para Celsius -> Kelvin: ");
+            Console.WriteLine("Digite 4 para Kelvin -> Celsius: ");
+            x = int.Parse(Console.ReadLine());
+            Console.WriteLine("Escreva a primeira temperatura: ");
+            a = int.Parse(Console.ReadLine());
+            Console.WriteLine("Escreva a segunda teperatura: ");
+            b = int.Parse(Console.ReadLine());
+
+            switch (x)
+            {
+                case 1:
+
+
+
+            }
+        }
+    }
+}

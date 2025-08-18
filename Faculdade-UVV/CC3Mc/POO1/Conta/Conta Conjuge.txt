@@ -1,0 +1,92 @@
+MAIN:
+package com.mycompany.hansrolf;
+import java.util.Scanner;
+public class Hansrolf {
+
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+         Conta cl = new Conta();
+        cl.numero = 10;
+        cl.saldo = 1000;
+        cl.limite = 500;
+        
+        Cliente cli1 = new Cliente();
+        cli1.nome = "1";
+        cli1.cpf = "12";
+        cli1.sobrenome = "123";
+        
+         Cliente cli2 = new Cliente();
+        cli2.nome = "hans";
+        cli2.cpf = "666";
+        cli2.sobrenome = "rolf";
+       
+        cl.titular = new Cliente();
+        cl.titular.cpf = "12";
+        cl.titular.nome = "1";
+        cl.titular .sobrenome =  "123";     
+        
+       cl.Imprimir();
+       
+       System.out.println("Escolha uma operação: \n [1] = Sacar \n [2] = Depositar \n [3] = sair");
+       int opcao = scan.nextInt();
+       if (opcao == 1) {
+           System.out.println("Digite o valor a sacar:");
+           int saq = scan.nextInt();
+           System.out.println();
+       } else {
+           if (opcao == 2){
+               System.out.println("Digite o valor a depositar: ");
+               int dep = scan.nextInt();
+           } else {
+               System.out.println("Saindo");
+           }
+       }
+    }
+       
+}
+
+CLASSE CLIENTE:
+package com.mycompany.hansrolf;
+
+public class Cliente {
+     String nome;
+    String sobrenome;
+    String cpf;
+    Cliente conjuge;
+   
+    public void casar(Cliente conjuge){
+       if(this.conjuge == null){
+            this.conjuge = conjuge;
+            this.conjuge.conjuge = this;
+       }else{
+           System.out.println("Abrantes é careca");
+       }
+    }
+}
+
+
+
+CLASSE CONTA:
+package com.mycompany.hansrolf;
+
+public class Conta {
+     int numero;
+    double saldo;
+    double limite = 1000.0;
+    Cliente titular;
+
+    void Imprimir(){
+        System.out.println("Numero: " + numero);
+        System.out.println("Saldo : " + saldo);
+        System.out.println("Limite : " +limite);
+        System.out.println("Cpf: " + titular.cpf + "\n Nome: "+ titular.nome + "\n sobrenome: " + titular.sobrenome);
+    }
+    
+    void sacar(int saq){
+       saldo -= saq;
+    }
+    void depositar(int dep){
+        saldo += dep;
+    }
+
+}

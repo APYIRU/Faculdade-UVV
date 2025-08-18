@@ -1,0 +1,326 @@
+6-
+#include <stdio.h>
+#include<math.h>
+
+
+int main()
+{
+    int x,y;
+    printf("Hello World \n");
+    printf("Escreve um número: ");
+    scanf("%d", &x);
+    printf("Escreve um número: ");
+    scanf("%d", &y);
+    printf("%d ", x);
+    printf("%d", y);
+    
+    if(x > y){
+        printf(" \n %d é maior que %d",x,y);
+    } else if(x < y) {
+        printf(" \n %d é maior que %d",y,x);
+    } else {
+        printf("\n Não vou ensinar");
+    }
+    
+    return 0;
+}
+
+7-
+
+
+8-
+#include <stdio.h>
+
+int main()
+{
+    int x,y;
+    printf("Escreva um numero: ");
+    scanf("%d", &x);
+    printf("Escreva outro numero: ");
+    scanf("%d", &y);
+    
+    if (x > y){
+        printf("%d é maior",x);
+    } else {
+        printf("%d é maior",y);
+    }
+    
+    printf("A diferença é de: %d", x - y);
+
+    return 0;
+}
+
+9-
+#include <stdio.h>
+
+int main()
+{
+    int x,y,z;
+	printf("Escolha dentre as seguintes opções");
+	printf("\n'1' Soma dos numeros");
+	printf("\n'2' DiferenC'a dos numeros");
+	printf("\n'3' Produto dos numeros");
+	printf("\n'4' DivisC#o dos numeros (denominador pode pode ser 0)");
+	scanf("%d", &x);
+	printf("Digite o primeiro numero: ");
+	scanf("%d", &y);
+	printf("Digite o segundo numero: ");
+	scanf("%d", &z);
+
+	switch (x) {
+	case 1:
+		printf("%d", y + z);
+		break;
+	case 2:
+		printf("%d", y - z);
+		break;
+	case 3:
+		printf("%d", y * z);
+		break;
+	case 4:
+		if(z == 0){
+		    printf("NÃO PODE SER ZERO");
+		} else {
+		    printf("%d", y / z);
+		}
+		break;
+	default:
+		printf("Burro");
+		break;
+
+	}
+
+    return 0;
+}
+
+10-
+#include <stdio.h>
+
+int main()
+{
+	int x,y;
+	
+	printf("Trabalha a quanto tempo (em anos): ");
+	scanf("%d", &x);
+	printf("Idade? : ");
+	scanf("%d", &y);
+
+	if(y >= 65 || x >= 30 ){
+	    printf("Aposentado");
+	} else if(x >= 60 && y >= 25){
+	    printf("Aposentado");
+	} else {
+	    printf("Vai trabalhar");
+	}
+}
+
+11-
+#include <stdio.h>
+
+int main()
+{
+    int i;
+    printf("Os primeiros 5 multiplos de 3 são: ");
+    for(i=1; i <= 5;    i++){
+        printf("\n%d", 3 * i);
+    }
+
+    return 0;
+}
+
+12-
+#include <stdio.h>
+
+int main()
+{
+   
+    int i;
+    for (i = 0; i<= 100; i++){
+        printf("%d ", i);
+    }
+    
+    i = 0;
+    printf("\n\n");
+    while (i <= 100){
+        printf("%d ", i);
+        i++;
+    }
+    printf("\n\n");
+    i = 0;
+    do {
+        printf("%d ",i);
+        i++;
+    } while (i <= 100);
+
+    return 0;
+}
+
+13-
+#include <stdio.h>
+
+int main()
+{
+   
+    int i = 10;
+    while(i >= 0){
+        printf("%d\n", i);
+        i--;
+    }
+    printf("Fim");
+    return 0;
+}
+
+14-
+#include <stdio.h>
+
+int par(int x){
+    if (x % 2 == 0){
+        return 1;
+    } else {
+        return 0;
+    }
+}
+
+int main()
+{   
+    int x;
+    printf("Escreva um número par: ");
+    scanf("%d", &x);
+    if(par(x) == 1){
+        for(int i = 0; i <= x; i++){
+            if(par(i) == 1){
+                printf("%d ", i);
+            }
+        }
+    }else {
+        printf("NÃO É PAR!!!!!!!!!!!!!!!!!!!! (nao vou ensinar)");
+    }
+    
+    
+    return 0;
+}
+
+
+15-
+#include <stdio.h>
+
+int main()
+{   
+    int maior = 0;
+    int menor;
+    int x = 0;
+    
+    do {
+        printf("Digite um número: ");
+        scanf("%d", &x);
+        
+        if (x > maior){
+            maior = x;
+        }
+        if (x < menor){
+            menor = x;
+        }
+        
+        
+    } while (x >= 0);
+    printf("O maior numero é : %d\n", maior);
+    printf("O menor numero é : %d\n", menor);
+    
+    return 0;
+}
+
+
+16-
+#include <stdio.h>
+
+int main()
+{
+    int i, x;
+    printf("Hello World");
+    int lista[6];
+    lista[0] = 1;
+    lista[1] = 0;
+    lista[2] = 5;
+    lista[3] = -2;
+    lista[4] = -5;
+    lista[5] = 7;
+    
+    x = lista[0] + lista[1] + lista[5];
+    
+    printf(" %d ", x);
+    
+    lista[4] = 100;
+    
+    for(i = -1; i < 6; i++) {
+        printf("%d\n", lista[i]);
+    }
+
+    return 0;
+}
+
+17-
+#include <stdio.h>
+
+int main()
+{
+    int i,x;
+    int lista[6];
+    for(i = 0; i < 6; i++){
+        printf("Escreve o %d numero: ", i + 1);
+        scanf("%d",&x);
+        lista[i] = x;
+        
+    }
+    for(i = 0; i<6; i++){
+        printf("%d \n", lista[i]);
+    }
+    printf("Não consegui colocar no mesmo for");
+    return 0;
+}
+
+
+18-
+#include <stdio.h>
+
+int main()
+{
+    int i,x;
+    int lista[10];
+    for(i = 0; i < 10; i++){
+        printf("Escreve o %d numero: ", i + 1);
+        scanf("%d",&x);
+        lista[i] = x;
+        if (lista[i] % 2 == 0){
+            printf("Esse número é par: %d \n", lista[i]);
+        } else {
+            printf("Esse não é par \n");
+        }
+    }
+    
+    return 0;
+}
+
+19-
+TO FAZENDO AINDA
+#include <stdio.h>
+
+int main()
+{
+    int i,x;
+    int lista[10], lista2[10];
+    for(i = 0; i < 10; i++){
+        printf("Escreve o %d da primeira lista: ", i + 1);
+        scanf("%d",&x);
+        lista[i] = x;
+        
+    }
+    for(i = 0; i < 10; i++){
+        printf("Escreve o %d numero da segunda lista: ", i + 1);
+        scanf("%d",&x);
+        lista[i] = x;
+        
+    }
+    
+    
+    return 0;
+}
