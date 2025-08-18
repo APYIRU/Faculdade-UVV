@@ -59,24 +59,39 @@ namespace Viniciusa
     {
         static void Main(string[] args)
         {
-            int x = 0;
-            float a = 0, b = 0;
+           int x = 0;
+            float a = 0;
             Console.WriteLine("Digite 1 para Celsius -> Farenheint: ");
             Console.WriteLine("Digite 2 para Fareheint -> Celsius: ");
             Console.WriteLine("Digite 3 para Celsius -> Kelvin: ");
             Console.WriteLine("Digite 4 para Kelvin -> Celsius: ");
             x = int.Parse(Console.ReadLine());
-            Console.WriteLine("Escreva a primeira temperatura: ");
-            a = int.Parse(Console.ReadLine());
-            Console.WriteLine("Escreva a segunda teperatura: ");
-            b = int.Parse(Console.ReadLine());
+            if (x == 1 || x == 2 || x == 3 || x == 4){
+                Console.WriteLine("Escreva a primeira temperatura: ");
+                a = float.Parse(Console.ReadLine());
+        
 
             switch (x)
             {
                 case 1:
-
-
-
+                    Console.WriteLine("Celsius = "+ a + " Fareheint = "+ (a * 1.8 + 32) );
+                    break;
+                case 2:
+                    Console.WriteLine("Fareheint = "+ a + " Celsius = "+ ((a - 32) / 1.8) );
+                    break;
+                case 3:
+                    Console.WriteLine("Celsius = "+ a + " Kelvin = "+ (a + 273.15) );
+                    break;
+                case 4:
+                    Console.WriteLine("Kelvin = "+ a + " Celsius = "+ (a - 273.15) );
+                    break;
+                default:
+                    Console.WriteLine("Aí não né meu chapa");
+                    break;
+            }  
+            
+            } else {
+                Console.WriteLine("Aí não né meu chapa");
             }
         }
     }
