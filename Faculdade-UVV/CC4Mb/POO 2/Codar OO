@@ -96,3 +96,25 @@ namespace Viniciusa
         }
     }
 }
+
+
+3-
+using System;
+class HelloWorld {
+  static void Main() {
+    int i;
+    float temp  = 0;
+    int contador = 0;
+    for (i = 0; i < 15; i++) {
+        Console.WriteLine($"Digita a temperatura do dia {i + 1} no verão de vitoria : ");
+        float x = float.Parse(Console.ReadLine());
+        if (x < 28){
+            Console.WriteLine("Por algum motivo o verão de vitoria fica acima de \n 28 graus, então ta errado.");
+        } else {
+            temp += x;
+            contador++;
+        }
+    }
+    Console.WriteLine($"Temperatura média é {temp/contador} em {contador} dias ");
+  }
+}
