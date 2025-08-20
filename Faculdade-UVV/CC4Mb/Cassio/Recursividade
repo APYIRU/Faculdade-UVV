@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+int imprime(int n){
+    if (n == 0){
+        return 1;
+    } else {
+        return n * imprime(n-1);
+    }
+}
+
+int main()
+{
+    int n = 3;
+    printf("Hello World\n");
+    
+    printf("%d\n", imprime(n));
+    return 0;
+}
