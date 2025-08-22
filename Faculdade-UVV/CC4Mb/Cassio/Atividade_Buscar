@@ -18,3 +18,60 @@ int main()
 
     return 0;
 }
+
+
+Melhorando: 
+#include <stdio.h>
+
+int Buscar(int vetor[], int valor, int tamanho)
+{
+    for (int i = 0; i < tamanho; i++)
+    {
+        if (valor == vetor[i])
+        {
+            return i;
+        }
+    }
+    return -1;
+}
+
+int Buscar_Ordenada(int vetor[], int valor, int tamanho)
+{
+    for (int i = 0; i < tamanho; i++)
+    {
+        if (valor == vetor[i])
+        {
+            return i;
+        } 
+        else if (valor < vetor[i])
+        {
+            break;
+        }
+         
+    }
+    return -1;
+}
+
+int Buscar_Binaria(int vetor[], int valor, int tamanho)
+{
+    if (valor < tamanho){
+        
+    } else if(valor > tamanho){
+        
+    } else {
+        
+    }
+}
+
+int main()
+{
+    int valor;
+    printf("Digite um valor: ");
+    scanf("%d", &valor);
+    int vetor1[7] = {23,4,67,-8,54,90,21};
+    int vetor2[7] = {-8,4,21,23,54,67,90};
+    int vetor3[10] = {-8,-5,1,4,14,21,23,54,67,90};
+    printf("%d", Buscar_Ordenada(vetor2, valor, 7));
+
+    return 0;
+}
