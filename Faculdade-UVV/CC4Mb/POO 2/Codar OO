@@ -118,3 +118,36 @@ class HelloWorld {
     Console.WriteLine($"Temperatura média é {temp/contador} em {contador} dias ");
   }
 }
+
+
+4-
+using System;
+class HelloWorld {
+  static void Main() {
+    float limpeza=0, alimentacao=0, higiene=0, total=0;
+    for(int i = 0; i < 3; i++){
+        Console.WriteLine($"Escreva o código do {i + 1}ª produto: ");
+        string cod = Console.ReadLine();
+        Console.WriteLine("Digite o preço: ");
+        float preço = float.Parse(Console.ReadLine());
+        total += preço;
+        if (cod == "L" || cod == "l"){
+            limpeza += preço;
+        } else {
+            if (cod == "H" || cod == "h"){
+                higiene += preço;
+            } else {
+                if (cod == "A" || cod == "a"){
+                    alimentacao += preço;
+                } else {
+                    Console.WriteLine("TA ERRADO");
+                }
+            }
+        }
+    }
+    Console.WriteLine("\n Preço Total: " + total);
+    Console.WriteLine("\n Preço da limpeza: " + limpeza);
+    Console.WriteLine("\n Preço da Comida: " + alimentacao);
+    Console.WriteLine("\n Preço de Higiene: " + higiene);
+  }
+}
