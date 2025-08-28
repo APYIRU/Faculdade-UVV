@@ -151,3 +151,55 @@ class HelloWorld {
     Console.WriteLine("\n Preço de Higiene: " + higiene);
   }
 }
+
+
+5-
+    Main:
+    Console.WriteLine("Hello, World!");
+Funcionario f1 = new(1, "daniel", "aaaaaaaaaa", 12);
+f1.cadastrar(f1);
+f1.consultar();
+f1.atualiarSal(14);
+Console.WriteLine(f1.getSalario());
+
+Funcionario:
+ private int matricula;
+ private string nome;
+ private string descricao;
+ private float salario;
+
+ public Funcionario(int matricula, string nome, string descricao, float salario)
+ {
+     this.matricula = matricula;
+     this.nome = nome;
+     this.descricao = descricao;
+     this.salario = salario;
+ }
+
+ public int getMatricula() { return matricula; }
+ public string getNome() { return nome; }
+ public string getDescricao() { return descricao; }
+ public float getSalario() { return salario; }
+
+ public void setMatricula() { matricula = matricula; }
+ public void setNome() { nome = nome; }
+
+ public void setDescricao(string descricao) => this.descricao = descricao;
+
+ public void setSalario(float salario) => this.salario = salario;
+
+
+ public void cadastrar(Funcionario funcionario) {
+     Console.WriteLine("Cadastrando " + nome);
+ }
+
+ public void consultar()
+ {
+     Console.WriteLine("CConsultando" + matricula);
+ }
+
+ public void atualiarSal(float n)
+ {
+     setSalario(getSalario() + n);
+     Console.WriteLine("Atualizado");
+ }
