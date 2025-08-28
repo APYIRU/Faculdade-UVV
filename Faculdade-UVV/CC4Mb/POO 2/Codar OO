@@ -203,3 +203,52 @@ Funcionario:
      setSalario(getSalario() + n);
      Console.WriteLine("Atualizado");
  }
+
+
+6-
+Main:
+
+Console.WriteLine("Hello, World!");
+Produto p1 = new("Daniel", 24.5);
+p1.obter();
+p1.atualizar("Claudio", 299);
+p1.obter();
+Produto p2 = new("Dan", 30);
+Console.WriteLine(Produto.getTotal());
+
+Produto:
+
+private string nome;
+private double preco;
+private static int estoque = 0;
+private static double total = 0;
+
+public Produto(string nome, double preco)
+{
+    this.nome = nome;
+    this.preco = preco;
+    estoque++;
+    total += preco;
+
+}
+
+public string getNome() {  return nome; }
+public double getPreco() { return preco; }
+public static double getTotal() => total;
+
+
+public void setNome() { nome = nome; }
+public void setPreco(double preco) => this.preco = preco;
+
+
+public void obter()
+{
+    Console.WriteLine($"Nome: {nome} Preço: {preco}");
+}
+
+public void atualizar(string nome, double preco)
+{
+    this.nome = nome;
+    total = total - this.preco + preco;
+    this.preco = preco;
+}
