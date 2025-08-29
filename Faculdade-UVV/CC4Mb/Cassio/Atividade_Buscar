@@ -115,3 +115,32 @@ int main()
         imprimirVet(vetor, 10);
         return 0;
     }
+
+
+BubbleSort:
+void bubbleSort(int *v, int n){
+    int i, j, troca, aux;
+    do {
+        for(i = 0; i < n - 1; i++){
+        troca = 0;
+        j = i + 1;
+        if(v[i] > v[j]){
+            aux = v[i];
+            v[i] = v[j];
+            v[j] = aux;
+            troca = 1;
+        }
+    }
+ }  while(troca = 0);
+   
+}
+
+int main()
+    {
+        int valor;
+        int vetor[10] = {6,75,1,14,24,18,3,7,50,10};
+        imprimirVet(vetor, 10);
+        bubbleSort(vetor, 10);
+        imprimirVet(vetor, 10);
+        return 0;
+    }
