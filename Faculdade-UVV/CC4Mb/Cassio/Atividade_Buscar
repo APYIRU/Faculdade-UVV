@@ -121,8 +121,8 @@ BubbleSort:
 void bubbleSort(int *v, int n){
     int i, j, troca, aux;
     do {
-        for(i = 0; i < n - 1; i++){
         troca = 0;
+        for(i = 0; i < n - 1; i++){
         j = i + 1;
         if(v[i] > v[j]){
             aux = v[i];
