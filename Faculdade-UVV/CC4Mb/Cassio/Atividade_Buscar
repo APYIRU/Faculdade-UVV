@@ -178,3 +178,40 @@ int main()
         imprimirVet(vetor, 10);
         return 0;
 }
+
+#include <stdio.h>
+#include <math.h>
+
+void imprimirVet(int *v, int n){
+    printf("\nVetor: |");
+    for(int i = 0; i < n; i++){
+        printf(" %d |", v[i]);
+    }
+}
+
+void mergeSort (int *v, int inicio, int fim) {
+    int meio;
+    if (inicio < fim) {
+        meio = floor ( (inicio + fim) / 2);
+        mergeSort(v, inicio, meio);
+        mergeSort(v, meio + 1, fim);
+        merge(v, inicio, meio, fim);
+    }
+}
+
+void merge(int *v, int inicio, int meio, int fim){
+    temp = (int *) malloc(tamanho * sizeof(int));
+}
+
+
+
+int main()
+{
+    int vetor[5] = {9,13,20,2,7};
+    imprimirVet(vetor, 5);
+    mergeSort(vetor,0,4);
+    imprimirVet(vetor, 5);
+
+    return 0;
+    
+}
