@@ -1,3 +1,5 @@
+FATORIAL:
+
 #include <stdio.h>
 
 int imprime(int n){
