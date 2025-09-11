@@ -132,7 +132,7 @@ void bubbleSort(int *v, int n){
             troca = 1;
         }
     }
- }  while(troca = 0);
+ }  while(troca == 1);
    
 }
 
