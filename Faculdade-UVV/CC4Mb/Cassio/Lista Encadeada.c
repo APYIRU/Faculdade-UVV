@@ -28,7 +28,7 @@ int insere_lista_fim(Lista *lista, int x){
     } else {
         cel *temp;
         temp = *lista;
-        whle(temp->seg != NULL){
+        while(temp->seg != NULL){
             temp = temp->seg;
         }
         temp->seg = aux;
