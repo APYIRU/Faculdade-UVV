@@ -74,7 +74,7 @@ int alturaNosArvBin(ArvBin *raiz){
     }
 }
 
-/*int buscaBinariaArvBin(ArvBin *raiz, int x){
+int buscaBinariaArvBin(ArvBin *raiz, int x){
     if(raiz == NULL){return 0;}
     if(*raiz == NULL){return 0;}
     
@@ -82,14 +82,12 @@ int alturaNosArvBin(ArvBin *raiz){
         return 1;
     } else{
         if(x < (*raiz) -> info){
-            int busca_esq = buscaBinariaArvBin(&((*raiz) -> esq));
-            return busca_esq;
+            buscaBinariaArvBin(&((*raiz) -> esq), x);
         } else {
-            int busca_dir = buscaBinariaArvBin(&((*raiz) -> dir));
-            return busca_dir;
+            buscaBinariaArvBin(&((*raiz) -> dir), x);
         }
     }
-}*/
+}
 
 int consulta_ArvBin(ArvBin *raiz, int valor){
     if(raiz == NULL){return 0;}
@@ -164,6 +162,9 @@ int main()
 	printf("%d", alturaNosArvBin(raiz));
 	printf("\nResultado Busca:\n");
 	printf("%d",consulta_ArvBin(raiz, 110));
+	printf("\nResultado Busca2:\n");
+	printf("%d", buscaBinariaArvBin(raiz, 52));
+	
 	
 	
 
