@@ -1,6 +1,29 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+int main()
+{
+    FILE *p;
+    char ch;
+    
+    p = fopen("Testando fopen.txt", "r");
+    if (p != NULL){
+         while((ch = fgetc(p)) != EOF) {
+             printf("%c", ch);
+         }
+    } else {
+        printf("Erro");
+    }
+
+    return 0;
+}
+
+
+EVOLUÇÃO
+
+#include <stdio.h>
+#include <stdlib.h>
+
 typedef struct Aluno
 {
     char nome[10];
@@ -25,3 +48,4 @@ int main()
 
     return 0;
 }
+
