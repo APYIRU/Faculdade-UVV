@@ -1,0 +1,8 @@
+Atividade Waneso
+
+Gerenciamento de Estado e Mutabilidade:
+A função processar imperativo, faz uso de criação de variáveis e a mudança de seus valores muitas vezes. Já o método funcional, você delega a função para a pipeline, onde ela não altera nenhuma variável, ela so filtra os dados que passam pela condição imposta, diminuindo a chance de erro e aumentando a paralelização
+
+Encapsulamento e Ocultação de Informação (POO):
+A vantagem é que caso o código tenha que ser alterado, só a classe vai ser alterada e não terá interferência na main, já que o calculo é feito por “de baixo dos panos”
+
